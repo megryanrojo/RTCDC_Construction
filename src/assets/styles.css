@@ -1,0 +1,617 @@
+/* ============================================
+   RTCDC CONSTRUCTION - MODERN DESIGN SYSTEM
+   ============================================ */
+
+/* ==================== TYPOGRAPHY ==================== */
+:root {
+  /* Font Families */
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-secondary: 'Georgia', 'Times New Roman', serif;
+
+  /* Font Sizes */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+  --fs-4xl: 2.25rem;
+  --fs-5xl: 3rem;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Line Heights */
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.625;
+  --lh-loose: 1.875;
+}
+
+/* ==================== SPACING SYSTEM ==================== */
+:root {
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 2.5rem;
+  --spacing-3xl: 3rem;
+  --spacing-4xl: 4rem;
+  --spacing-5xl: 5rem;
+}
+
+/* ==================== BORDER RADIUS ==================== */
+:root {
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* ==================== SHADOWS ==================== */
+:root {
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* ==================== TRANSITIONS ==================== */
+:root {
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+}
+
+/* ==================== GLOBAL STYLES ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-primary);
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: #545150;
+  background-color: #ffffff;
+}
+
+/* ==================== TYPOGRAPHY COMPONENTS ==================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--spacing-md);
+  color: #1f2937;
+}
+
+h1 {
+  font-size: var(--fs-4xl);
+}
+
+h2 {
+  font-size: var(--fs-3xl);
+}
+
+h3 {
+  font-size: var(--fs-2xl);
+}
+
+h4 {
+  font-size: var(--fs-xl);
+}
+
+h5 {
+  font-size: var(--fs-lg);
+}
+
+h6 {
+  font-size: var(--fs-base);
+}
+
+p {
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: #BF1B2C;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: #8a1420;
+  text-decoration: underline;
+}
+
+/* ==================== BUTTONS ==================== */
+.btn-primary {
+  background-color: #BF1B2C;
+  color: white;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: 2px solid #BF1B2C;
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #8a1420;
+  border-color: #8a1420;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #1f2937;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: 2px solid #1f2937;
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==================== CARDS ==================== */
+.card {
+  border: 2px solid #d1d5db;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  background-color: white;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: #BF1B2C;
+  transform: translateY(-4px);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #BF1B2C, #545150);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-xl);
+  color: white;
+}
+
+.card-icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #BF1B2C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-xl);
+  color: white;
+}
+
+/* ==================== SECTIONS ==================== */
+section {
+  scroll-margin-top: 80px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-5xl);
+}
+
+.section-header h2 {
+  font-size: var(--fs-4xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-header p {
+  font-size: var(--fs-lg);
+  max-width: 700px;
+  margin: 0 auto;
+  color: #545150;
+}
+
+/* ==================== BACKGROUNDS ==================== */
+.bg-light {
+  background-color: #f3f4f6;
+}
+
+.bg-dark {
+  background-color: #1f2937;
+  color: white;
+}
+
+.bg-accent {
+  background-color: #BF1B2C;
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+/* ==================== BORDERS ==================== */
+.border-top {
+  border-top: 2px solid #d1d5db;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #d1d5db;
+}
+
+.border-accent {
+  border: 2px solid #BF1B2C;
+}
+
+/* ==================== UTILITIES ==================== */
+.text-primary {
+  color: #1f2937;
+}
+
+.text-secondary {
+  color: #545150;
+}
+
+.text-accent {
+  color: #BF1B2C;
+}
+
+.text-light {
+  color: #9ca3af;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Spacing */
+.m-0 { margin: 0; }
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.ml-0 { margin-left: 0; }
+.mr-0 { margin-right: 0; }
+
+.m-auto { margin: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.my-auto { margin-top: auto; margin-bottom: auto; }
+
+/* Display */
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.gap-1 { gap: var(--spacing-sm); }
+.gap-2 { gap: var(--spacing-md); }
+.gap-3 { gap: var(--spacing-lg); }
+.gap-4 { gap: var(--spacing-xl); }
+.gap-5 { gap: var(--spacing-2xl); }
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--fs-3xl);
+  }
+
+  h2 {
+    font-size: var(--fs-2xl);
+  }
+
+  h3 {
+    font-size: var(--fs-xl);
+  }
+
+  .section-header {
+    margin-bottom: var(--spacing-4xl);
+  }
+
+  .section-header h2 {
+    font-size: var(--fs-2xl);
+  }
+
+  .card {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-base) ease-in-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft var(--transition-base) ease-in-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight var(--transition-base) ease-in-out;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.6s ease-in-out;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.6s ease-in-out;
+}
+
+.animate-slide-in-down {
+  animation: slideInDown 0.6s ease-in-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-icon-hover:hover svg {
+  animation: rotateIcon 0.6s ease-in-out;
+}
+
+/* Stagger animations for lists */
+.stagger-item {
+  opacity: 0;
+  animation: slideInUp 0.6s ease-in-out forwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0s; }
+.stagger-item:nth-child(2) { animation-delay: 0.1s; }
+.stagger-item:nth-child(3) { animation-delay: 0.2s; }
+.stagger-item:nth-child(4) { animation-delay: 0.3s; }
+.stagger-item:nth-child(5) { animation-delay: 0.4s; }
+.stagger-item:nth-child(6) { animation-delay: 0.5s; }
+.stagger-item:nth-child(7) { animation-delay: 0.6s; }
+.stagger-item:nth-child(8) { animation-delay: 0.7s; }
+
+/* Scroll-triggered animations */
+.scroll-animate {
+  opacity: 0;
+}
+
+.scroll-animate.in-view {
+  animation: slideInUp 0.6s ease-in-out forwards;
+}
+
+.scroll-animate.in-view-fade {
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+.scroll-animate.in-view-left {
+  animation: slideInLeft 0.6s ease-in-out forwards;
+}
+
+.scroll-animate.in-view-right {
+  animation: slideInRight 0.6s ease-in-out forwards;
+}
+
+.scroll-animate.in-view-down {
+  animation: slideInDown 0.6s ease-in-out forwards;
+}
+
+/* ======= NAVBAR ACTIVE/LINK MODERNIZATION ======= */
+.navbar-link {
+  font-weight: 500;
+  color: #545150;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color var(--transition-fast);
+}
+.navbar-link:hover {
+  color: #BF1B2C;
+}
+.navbar-link:focus {
+  color: #BF1B2C;
+  outline: 2px solid #bbb;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+.navbar-link.active {
+  color: #BF1B2C;
+}
+.navbar-link.active::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-top: 4px;
+  height: 3px;
+  width: 32px;
+  background: linear-gradient(90deg,#BF1B2C, #9f1620);
+  border-radius: 2px;
+  transition: width 250ms cubic-bezier(.4,0,.2,1);
+}
+@media (max-width: 768px) {
+  .navbar-link.active::after {
+    width: 22px;
+    height: 2px;
+  }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+:focus {
+  outline: 2px solid #BF1B2C;
+  outline-offset: 2px;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid #BF1B2C;
+  outline-offset: 2px;
+}
+
+/* Remove red outline on navbar-link/button focus for cleaner UI, add subtle gray outline */
+button:focus,
+button:active {
+  outline: 2px solid #bbb !important; /* Subtle, not red */
+  outline-offset: 2px;
+  box-shadow: none;
+}
+a:focus,
+a:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .no-print {
+    display: none;
+  }
+}

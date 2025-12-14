@@ -1,0 +1,110 @@
+/* Color Palette */
+:root {
+  /* CSS HEX */
+  --bright-snow: #F6F6F6ff;
+  --charcoal: #545150ff;
+  --silver: #CBCACAff;
+  --alabaster-grey: #E3E3E3ff;
+  --carmine: #BF1B2Cff;
+}
+
+/* CSS HSL */
+:root {
+  --bright-snow-hsl: hsla(0, 0%, 96%, 1);
+  --charcoal-hsl: hsla(15, 2%, 32%, 1);
+  --silver-hsl: hsla(0, 1%, 79%, 1);
+  --alabaster-grey-hsl: hsla(0, 0%, 89%, 1);
+  --carmine-hsl: hsla(354, 75%, 43%, 1);
+}
+
+/* CSS RGB */
+:root {
+  --bright-snow-rgb: rgba(246, 246, 246, 1);
+  --charcoal-rgb: rgba(84, 81, 80, 1);
+  --silver-rgb: rgba(203, 202, 202, 1);
+  --alabaster-grey-rgb: rgba(227, 227, 227, 1);
+  --carmine-rgb: rgba(191, 27, 44, 1);
+}
+
+/* Gradients */
+:root {
+  --gradient-top: linear-gradient(0deg, #F6F6F6ff, #545150ff, #CBCACAff, #E3E3E3ff, #BF1B2Cff);
+  --gradient-right: linear-gradient(90deg, #F6F6F6ff, #545150ff, #CBCACAff, #E3E3E3ff, #BF1B2Cff);
+  --gradient-bottom: linear-gradient(180deg, #F6F6F6ff, #545150ff, #CBCACAff, #E3E3E3ff, #BF1B2Cff);
+  --gradient-left: linear-gradient(270deg, #F6F6F6ff, #545150ff, #CBCACAff, #E3E3E3ff, #BF1B2Cff);
+  --gradient-top-right: linear-gradient(45deg, #F6F6F6ff, #545150ff, #CBCACAff, #E3E3E3ff, #BF1B2Cff);
+  --gradient-bottom-right: linear-gradient(135deg, #F6F6F6ff, #545150ff, #CBCACAff, #E3E3E3ff, #BF1B2Cff);
+  --gradient-top-left: linear-gradient(225deg, #F6F6F6ff, #545150ff, #CBCACAff, #E3E3E3ff, #BF1B2Cff);
+  --gradient-bottom-left: linear-gradient(315deg, #F6F6F6ff, #545150ff, #CBCACAff, #E3E3E3ff, #BF1B2Cff);
+  --gradient-radial: radial-gradient(#F6F6F6ff, #545150ff, #CBCACAff, #E3E3E3ff, #BF1B2Cff);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+a[href^="#"] {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==================== INTERACTIVE ELEMENTS ==================== */
+/* Links */
+a {
+  transition: all 250ms ease-in-out;
+}
+
+a:hover {
+  color: #BF1B2C;
+}
+
+/* Buttons */
+button, .btn {
+  transition: all 250ms ease-in-out;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(191, 27, 44, 0.1);
+}
+
+/* Cards */
+.card, [class*="card"] {
+  transition: all 250ms ease-in-out;
+}
+
+.card:hover, [class*="card"]:hover {
+  border-color: #BF1B2C;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+img {
+  transition: transform 250ms ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* ==================== FOCUS STATES ==================== */
+:focus-visible {
+  outline: 2px solid #BF1B2C;
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #BF1B2C;
+  outline-offset: 2px;
+}
+
+/* ==================== DARK MODE SUPPORT (Optional) ==================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #f3f4f6;
+    --text-secondary: #d1d5db;
+  }
+}
